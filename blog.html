@@ -164,10 +164,11 @@
     color: var(--text-mid); font-size: 1rem; line-height: 1.75; margin-bottom: 28px;
   }
   .featured-visual {
-    background: linear-gradient(145deg, var(--sky) 0%, var(--green-light) 100%);
     border-radius: 20px; height: 280px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 6rem;
+    overflow: hidden; flex-shrink: 0;
+  }
+  .featured-visual img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
   }
 
   /* Post grid */
@@ -183,13 +184,13 @@
   }
   .post-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(30,58,95,0.13); }
   .post-card-img {
-    height: 160px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 3.5rem;
+    height: 200px; overflow: hidden; flex-shrink: 0;
   }
-  .post-card-img.color-sun     { background: linear-gradient(135deg, #FFF8F0, #FFD699); }
-  .post-card-img.color-navy    { background: linear-gradient(135deg, #D6EAF8, #a8cde8); }
-  .post-card-img.color-green   { background: linear-gradient(135deg, #f0faf0, #C5E0B4); }
+  .post-card-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.4s ease;
+  }
+  .post-card:hover .post-card-img img { transform: scale(1.04); }
   .post-card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
   .post-category {
     font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
@@ -341,14 +342,18 @@
         <span style="font-size:0.82rem;color:var(--text-light);">April 2, 2026 &nbsp;·&nbsp; 7 min read</span>
       </div>
     </div>
-    <div class="featured-visual">💸</div>
+    <div class="featured-visual">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Person reviewing finances and budget">
+    </div>
   </div>
 
   <!-- POST GRID -->
   <div class="posts-grid">
 
     <div class="post-card reveal" data-cat="personal-finance">
-      <div class="post-card-img color-sun">🏦</div>
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80" alt="Coins in a jar representing emergency savings">
+      </div>
       <div class="post-card-body">
         <span class="post-category cat-personal-finance">Personal Finance</span>
         <h3>The $500 Emergency Fund: Why Starting Small Is the Right Move</h3>
@@ -361,7 +366,9 @@
     </div>
 
     <div class="post-card reveal" data-cat="news">
-      <div class="post-card-img color-navy">⚖️</div>
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Legal gavel representing debt collection rules">
+      </div>
       <div class="post-card-body">
         <span class="post-category cat-news">News &amp; Legislation</span>
         <h3>New Debt Collection Rules: What They Mean for You</h3>
@@ -374,7 +381,9 @@
     </div>
 
     <div class="post-card reveal" data-cat="trends">
-      <div class="post-card-img color-green">📈</div>
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" alt="Person writing a budget plan">
+      </div>
       <div class="post-card-body">
         <span class="post-category cat-trends">Trends</span>
         <h3>The Rise of "Loud Budgeting" — and Why It's a Good Thing</h3>
@@ -387,7 +396,9 @@
     </div>
 
     <div class="post-card reveal" data-cat="personal-finance">
-      <div class="post-card-img color-sun">🧾</div>
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80" alt="Calculator and household bills">
+      </div>
       <div class="post-card-body">
         <span class="post-category cat-personal-finance">Personal Finance</span>
         <h3>5 Ways to Lower Your Monthly Bills Without Feeling Deprived</h3>
@@ -400,7 +411,9 @@
     </div>
 
     <div class="post-card reveal" data-cat="news">
-      <div class="post-card-img color-navy">🏛️</div>
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80" alt="Graduation caps tossed in the air">
+      </div>
       <div class="post-card-body">
         <span class="post-category cat-news">News &amp; Legislation</span>
         <h3>Student Loan Updates: What Borrowers Need to Know Right Now</h3>
@@ -413,7 +426,9 @@
     </div>
 
     <div class="post-card reveal" data-cat="trends">
-      <div class="post-card-img color-green">🌱</div>
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Financial coach meeting with a client">
+      </div>
       <div class="post-card-body">
         <span class="post-category cat-trends">Trends</span>
         <h3>Why More Americans Are Choosing Financial Coaching Over Banks</h3>
