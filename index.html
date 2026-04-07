@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Everyday Financial Wellness – Money Made Simple. Life Made Better.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&family=Montserrat:ital,wght@0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
 <style>
   :root {
     --sun: #F5A332;
@@ -100,15 +100,17 @@
   }
 
   .hero-tagline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
     color: var(--navy);
-    line-height: 1.2;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
     margin-top: 0;
     position: relative; z-index: 2;
     animation: float-in 0.9s 0.15s cubic-bezier(.22,1,.36,1) both;
   }
-  .hero-tagline em { color: var(--sun); font-style: italic; }
+  .hero-tagline em { color: var(--sun); font-style: italic; font-weight: 900; }
 
   .hero-sub {
     font-size: 1.2rem; color: var(--text-mid); font-weight: 400;
