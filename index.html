@@ -61,10 +61,10 @@
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     text-align: center;
-    padding: 120px 24px 220px;
+    padding: 120px 24px 260px;
     position: relative;
     overflow: hidden;
     background: linear-gradient(175deg, #FFF8F0 0%, #D6EAF8 55%, #C5E0B4 100%);
@@ -139,15 +139,15 @@
   .btn-secondary:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
 
   .hero-scroll-hint {
-    position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%);
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
     display: flex; flex-direction: column; align-items: center; gap: 6px;
-    color: var(--text-light); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;
-    text-transform: uppercase; z-index: 2;
+    color: rgba(255,255,255,0.85); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; z-index: 3;
     animation: float-in 1s 0.7s both;
   }
   .scroll-arrow {
-    width: 22px; height: 22px; border-right: 2px solid var(--text-light);
-    border-bottom: 2px solid var(--text-light); transform: rotate(45deg);
+    width: 22px; height: 22px; border-right: 2px solid rgba(255,255,255,0.85);
+    border-bottom: 2px solid rgba(255,255,255,0.85); transform: rotate(45deg);
     animation: bounce-down 1.5s ease-in-out infinite;
   }
   @keyframes bounce-down { 0%,100%{transform:rotate(45deg) translateY(0)} 50%{transform:rotate(45deg) translateY(5px)} }
