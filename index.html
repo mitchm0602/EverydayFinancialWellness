@@ -85,7 +85,7 @@
 
   .hero-hills {
     position: absolute; bottom: 0; left: 0; right: 0;
-    height: 180px;
+    width: 100%; height: 220px;
   }
 
   .hero-logo {
@@ -118,7 +118,7 @@
 
   .hero-buttons {
     display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
-    margin-top: 36px;
+    margin-top: 16px;
     position: relative; z-index: 2;
     animation: float-in 0.9s 0.4s cubic-bezier(.22,1,.36,1) both;
   }
@@ -434,9 +434,13 @@
   </div>
 
   <!-- Hills SVG -->
-  <svg class="hero-hills" viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,180 L0,100 Q200,20 400,90 Q600,150 720,80 Q840,20 1040,70 Q1200,110 1440,60 L1440,180 Z" fill="#1E3A5F" opacity="1"/>
-    <path d="M0,180 L0,130 Q250,60 500,110 Q700,150 900,100 Q1100,55 1440,90 L1440,180 Z" fill="#1E3A5F" opacity="0.6"/>
+  <svg class="hero-hills" viewBox="0 0 1440 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <!-- Back hill layer – lighter blue -->
+    <path d="M0,220 L0,120 Q180,30 360,100 Q540,165 720,90 Q900,20 1080,80 Q1260,135 1440,70 L1440,220 Z" fill="#4A90C4" opacity="0.5"/>
+    <!-- Mid hill layer -->
+    <path d="M0,220 L0,150 Q200,70 400,130 Q600,180 800,120 Q1000,65 1200,110 Q1340,140 1440,100 L1440,220 Z" fill="#2E6DA4" opacity="0.75"/>
+    <!-- Front hill layer – darkest blue -->
+    <path d="M0,220 L0,175 Q250,110 500,160 Q700,195 900,150 Q1100,110 1300,155 Q1400,175 1440,160 L1440,220 Z" fill="#1E3A5F" opacity="1"/>
   </svg>
 </section>
 
